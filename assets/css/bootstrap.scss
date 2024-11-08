@@ -1,0 +1,64 @@
+@import '../scss/functions';
+
+@import '../scss/functions';
+@import '../scss/variables';
+
+$white-NF: #fafafa;
+$gray-NF: #141414;
+$gray-NF-light: #808080;
+$red-NF: #ff0000;
+
+$custom-theme-colors: (
+  'white-NF': $white-NF,
+  'gray-NF': $gray-NF,
+  'gray-NF-light': $gray-NF,
+  'red-NF': $red-NF,
+  'gray-100': $gray-100,
+  'gray-200': $gray-200,
+  'gray-300': $gray-300,
+  'gray-400': $gray-400,
+  'gray-500': $gray-500,
+  'gray-600': $gray-600,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+$custom-font-sizes: (
+  7: $font-size-base * 0.75,
+  8: $font-size-base * 0.5,
+  9: $font-size-base * 0.25,
+  bigtitle: $font-size-base * 4,
+);
+
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
+
+$custom-position-values: (
+  25: 25%,
+  75: 75%,
+);
+
+$position-values: map-merge($position-values, $custom-position-values);
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-nav {
+  color: $white-NF;
+  li {
+    color: $white-NF;
+    .nav-link {
+      font-size: map-get($font-sizes, 7);
+      color: $white-NF;
+      &:hover {
+        font-weight: bold;
+        color: $white-NF;
+      }
+      &.active {
+        color: $white-NF;
+      }
+    }
+  }
+}
+
+@import '../scss/bootstrap.scss';
