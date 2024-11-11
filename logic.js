@@ -19,22 +19,6 @@ const getHTMLFromTemplate = (template, data, minify = true,) => {
     let html = ''
     switch (template) {
 
-        case 'genresDropDown': {
-
-            html = `
-            <!-------------------------------------------------------------------->
-            <!-- genresDropDown ${pad(data.order, 2)} -->
-            <!-------------------------------------------------------------------->
-            <li>
-                <a class="dropdown-item" href="${data.itemLink}">${data.itemTitle}</a>
-            </li>
-            <!-------------------------------------------------------------------->
-            <!-- genresDropDown ${pad(data.order, 2)} -->
-            <!-------------------------------------------------------------------->
-            `
-            break
-        }
-
         case 'trendingNowCards':
         case 'watchItAgainCards':
         case 'newReleasesCards': {
