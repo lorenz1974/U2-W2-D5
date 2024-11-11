@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+</head>
+
+<body data-bs-theme="dark">
+
+    <!-- Begin First fluid container -->
+    <div class="border border-1 border-light">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <!-- Begin Nav fluid contaner -->
+                <div class="container-fluid">
+                    <!-- Begin logo and button -->
+                    <div id="logoAndButton">
+                        <a class="navbar-brand" href="#">
+                            <img width="100px" src="./assets/netflix_logo.png" alt="Logo">
+                        </a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="container-fluid mx-auto w-95 mt-4">
+
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col ">
+                            <h1 class="border border-0 border-bottom">Edit Profile</h1>
+
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="./assets/avatar.png" alt="Profile" class="img-fluid">
+                                </div>
+
+                                <div class="col-6 flex-grow-1">
+                                    <p class="text-white-NF bg-gray-600 p-2 fs-6">Strive Student</p>
+                                    <p class="text-white-NF pt-2 fs-6">Language:</p>
+                                    <div id="languageDropDown" class="border border-0 border-bottom pb-4">
+                                        <select class="form-select m-0">
+                                            <option>English</option>
+                                            <option>Italian</option>
+                                            <option>French</option>
+                                        </select>
+                                    </div>
+                                    <p class="text-white-NF pt-4 fs-6">Maturity Settings:</p>
+
+                                    <div id="maturityDropDown">
+                                        <select id="maturityRatingSettings" class="form-select text-bg-gray-500">
+                                            <option selected>ALL MATURITY RATING</option>
+                                            <option>3</option>
+                                            <option>6</option>
+                                            <option>9</option>
+                                            <option>12</option>
+                                        </select>
+
+                                        <p id="maturityRatingInfo"
+                                            class="text-white-NF pt-4 fs-7 border border-0 border-bottom pb-4">Maturity
+                                            Rating...
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <p class="text-white-NF pt-4 fs-6">Autoplay controls:</p>
+                                        <div>
+                                            <input class="form-check-input bg-black" type="checkbox" id="check1"
+                                                name="option1" value="something" checked>
+                                            <label class="form-check-label">Autoplay next episode ina a series on all
+                                                devices.</label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input bg-black" type="checkbox" id="check2"
+                                                name="option2" value="something" checked>
+                                            <label class="form-check-label">Autoplay previous while browsing on all
+                                                devices.</label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="row mt-5 border-top pt-4">
+                                <div id="profileButtons" class="col d-flex justify-content-around">
+                                    <button type="button"
+                                        class="btn btn-gray-NF rounded-0 border border-1 px-4">SAVE</button>
+                                    <button type="button"
+                                        class="btn btn-gray-NF rounded-0 border border-1 px-4">CANCEL</button>
+                                    <button type="button" class="btn btn-gray-NF rounded-0 border border-1 px-4">DELETE
+                                        PROFILE</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col"></div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- Begin footer container-->
+        <footer class="d-flex flex-column mt-3 w-50 mx-auto">
+
+            <div id="socialIcons" class="mt-5">
+                <i class="fa-brands fa-square-facebook mx-3 fs-4"></i>
+                <i class="fa-brands fa-instagram mx-3 fs-4"></i>
+                <i class="fa-brands fa-twitter mx-3 fs-4"> </i>
+                <i class="fa-brands fa-youtube mx-3 fs-4"></i>
+            </div>
+
+            <div id="bottomNavBars" class="row mt-3">
+
+                <div id="footerLinks1" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+                </div>
+
+                <div id="footerLinks2" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+                <div id="footerLinks3" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+                <div id="footerLinks4" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+            </div>
+
+            <div id="sourceCode" class="m-3">
+                <button type="button" class="btn border border-2 rounded-0 p-1 fs-7">Service Code</button>
+            </div>
+
+            <div id="copyRight" class="m-3">
+                <p class="fs-7 p-0 m-0">1997-2024 Netflix, inc.</p>
+            </div>
+
+        </footer> <!-- End footer container-->
+
+    </div> <!-- End first fluid container -->
+
+    <!-- Begin modelInfoCard-->
+    <div class="modal" id="cardInfoModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 id="modalTitle" class="modal-title text-red-NF">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div id="modalBody" class="modal-body shadow">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-red-NF text-white-NF " data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- End modelInfoCard-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="./jsTools.js"></script>
+    <script src="./contentsArray.js"></script>
+    <script src="./logic.js"></script>
+
+</body>
+
+</html>

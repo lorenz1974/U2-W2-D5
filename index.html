@@ -1,141 +1,309 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NETFLIX</title>
 
-
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-
-    <style>
-
-    </style>
-
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
 </head>
 
-<body class="bg-dark text-light">
-    <div class="row">
-        <div class="col">
-            <header>
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
+<body data-bs-theme="dark">
+
+    <!-- Begin First fluid container -->
+    <div class="border border-1 border-light">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <!-- Begin Nav fluid contaner -->
+                <div class="container-fluid">
+                    <!-- Begin logo and button -->
+                    <div id="logoAndButton">
                         <a class="navbar-brand" href="#">
-                            <img width="80px" src="/assets/netflix_logo.png">
+                            <img width="100px" src="./assets/netflix_logo.png" alt="Logo">
                         </a>
+
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                    </div> <!-- End logo and button -->
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active  text-light" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#">TV Shows</a>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link text-light" href="#">Movies</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#">Recently Addded</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-light" href="#">My List</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=" d-flex align-items-center">
-                            <input class="form-control text-light bg-dark rounded-0 border-0 border-bottom"
-                                type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn text-bg-dark text-light ms-3" type="submit"><i
-                                    class="fa-solid fa-magnifying-glass"></i></button>
-                            <div class="h-100 ms-3">KIDS</div>
-                            <div class="ms-3"><i class="fa-solid fa-bell"></i></div>
-                            <img width="30px" class="ms-3" src="/assets/avatar.png">
-                        </div>
+                    <!-- Begin search and user-->
+                    <div id="userAndCo." class="d-flex order-md-2">
+                        <form id="searchForm" class="d-none my-auto">
+                            <input type="text" placeholder="Search" class="m-0 p-0">
+                        </form>
+                        <p id="searchMagnifier" class="my-auto"><i class="fa-solid fa-magnifying-glass ms-3"></i></p>
+                        <p class="ms-3 my-auto">KIDS</p>
+                        <p class="my-auto"><i class="fa-solid fa-bell ms-3"></i></p>
+                        <!-- Begin dropdown -->
+                        <div id="profileDropDown" class="dropdown">
+                            <button type="button" class="btn dropdown-toggle border-0" data-bs-toggle="dropdown"><img
+                                    width="30px" src="./assets/avatar.png" alt="User">
+                            </button>
+
+                            <!--------------------->
+                            <!-- Generated by JS -->
+                            <!--------------------->
+
+                        </div> <!-- End dropdown -->
+                    </div> <!-- End search and user-->
+
+                    <!-- Begin navbar items -->
+                    <div class="collapse navbar-collapse" id="topNavBar">
+
+                        <!--------------------->
+                        <!-- Generated by JS -->
+                        <!--------------------->
+
+                    </div> <!-- End navbar items -->
+
+                </div> <!-- End Nav fluid contaner -->
+            </nav>
+        </header>
+
+        <main class="container-fluid mx-auto w-95 mt-4">
+
+            <!-- Begin TV Shows -->
+            <div class="row d-flex justify-content-between">
+
+                <!-- Begin col -->
+                <div class="col">
+
+                    <!-- Begin TVShows, DropDown and Buttons -->
+                    <div id="tvShowsAndButtons" class="d-flex justify-content-between">
+
+                        <!-- Begin TVShows and DropDown -->
+                        <div id="tvShowsAndGenresDorpoDown" class="d-flex justify-content-start align-content-center">
+                            <h1>TV Shows</h1>
+
+                            <!-- Begin Dropdown-->
+                            <div id="genresDropDown" class="dropdown d-flex flex-column justify-content-around ms-3">
+                                <button type="button" class="btn border border-1 border-white-NF rounded-0 fs-7"
+                                    data-bs-toggle="dropdown">
+                                    Genres
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </button>
+
+                                <!--------------------->
+                                <!-- Generated by JS -->
+                                <!--------------------->
+
+                            </div> <!-- End dropdown -->
+
+                        </div> <!-- End TVShows and Dropdown -->
+
+                        <!-- Begin Buttons -->
+                        <div id="tvShowsButtonsDiv" class="d-flex">
+                            <button id="cardsAsList" type="button"
+                                class="btn border border-1 border-white-NF rounded-0">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                            <button id="cardsAsGrid" type="button"
+                                class="btn border border-1 border-white-NF rounded-0 ms-3">
+                                <i class="fa-solid fa-table-cells-large"></i>
+                            </button>
+                        </div><!-- End Buttons -->
+
+                    </div> <!-- EndTVShows, DropDown and Buttons -->
+
+                </div> <!-- End col -->
+
+            </div> <!-- End TV Shows -->
+
+            <!-------------------------------------------------->
+            <!-- Begin trending                               -->
+            <!-------------------------------------------------->
+            <section>
+                <h2 class="fs-4 mt-5">Trending Now</h2>
+                <div id="trendingNowContainer" class="d-flex justify-content-around">
+
+
+                    <div id='trendingNowPrevious' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                </nav>
-            </header>
 
-            <main>
-                <div class="container-fluid m-5">
-                    <div class="d-flex align-items-center justify-content-lg-start w-25">
-                        <h1 class="d-block fs-3">TV Shows</h1>
-                        <select class="form-select bg-dark text-light rounded-0 border-white fs-6 w-50 m-3"
-                            id="showSelect">
-                            <option selected>Genres</option>
-                            <option value="1">Stories</option>
-                            <option value="2">Action</option>
-                            <option value="3">Fanta</option>
-                        </select>
+                    <!-- Begin Trending Now Cards -->
+                    <div id="trendingNowCards" class="d-flex align-content-center mt-3 p-3 overflow-hidden">
+
+                        <!--------------------->
+                        <!-- Generated by JS -->
+                        <!--------------------->
+
+                    </div> <!-- End Trending Now Cards -->
+
+                    <div id='trendingNowNext' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </div>
 
 
+                </div><!-- End trending -->
+            </section>
 
-                    <h2 class="fs-4 mt-3">Trending Now</h2>
-                    <div class="row g-0 mt-1">
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media0.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media1.jpg"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media2.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media3.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media5.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media12.jpg"></div>
+            <!-------------------------------------------------->
+            <!-- Begin Watch It Again                         -->
+            <!-------------------------------------------------->
+            <section>
+                <h2 class="fs-4 mt-5">Watch It Again</h2>
+                <div id="watchItAgainContainer" class="d-flex justify-content-around">
+
+                    <div id='watchItAgainPrevious' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
 
-                    <h2 class="fs-4 mt-3">Watch It Again</h2>
-                    <div class="row g-0">
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media0.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media1.jpg"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media2.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media3.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media5.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media12.jpg"></div>
+                    <!-- Begin Watch It Again Cards -->
+                    <div id="watchItAgainCards" class="d-flex align-content-center mt-3 p-3 overflow-hidden">
+
+                        <!--------------------->
+                        <!-- Generated by JS -->
+                        <!--------------------->
+
+                    </div> <!-- End Watch It Again Cards -->
+
+                    <div id='watchItAgainNext' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-right"></i>
                     </div>
 
-                    <h2 class="fs-4 mt-3">New Release</h2>
-                    <div class="row g-0">
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media0.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media1.jpg"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media2.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media3.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media5.webp"></div>
-                        <div class="col m-0 me-1"><img width="100%" src="/assets/media/media12.jpg"></div>
+                </div><!-- Watch It Again -->
+            </section>
+
+            <!-------------------------------------------------->
+            <!-- Begin New Release                            -->
+            <!-------------------------------------------------->
+            <section>
+                <h2 class="fs-4 mt-5">New Releases</h2>
+                <div id="newReleasesContainer" class="d-flex justify-content-around">
+
+                    <div id='newReleasesPrevious' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-left"></i>
                     </div>
+
+                    <!-- Begin New Releases Cards -->
+                    <div id="newReleasesCards" class="d-flex align-content-center mt-3 p-3 overflow-hidden">
+
+                        <!--------------------->
+                        <!-- Generated by JS -->
+                        <!--------------------->
+
+                    </div> <!-- End Watch It Again Cards -->
+
+                    <div id='newReleasesNext' class="mx-1 my-auto">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+
+                </div><!-- End New releases -->
+            </section>
+
+        </main>
+
+
+        <!-- Begin footer container-->
+        <footer class="d-flex flex-column mt-3 w-50 mx-auto">
+
+            <div id="socialIcons" class="mt-5">
+                <i class="fa-brands fa-square-facebook mx-3 fs-4"></i>
+                <i class="fa-brands fa-instagram mx-3 fs-4"></i>
+                <i class="fa-brands fa-twitter mx-3 fs-4"> </i>
+                <i class="fa-brands fa-youtube mx-3 fs-4"></i>
+            </div>
+
+            <div id="bottomNavBars" class="row mt-3">
+
+                <div id="footerLinks1" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
 
                 </div>
-            </main>
 
-            <footer>
-                <!-- Insert here your footer. -->
-            </footer>
+                <div id="footerLinks2" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+                <div id="footerLinks3" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+                <div id="footerLinks4" class="col">
+
+                    <!--------------------->
+                    <!-- Generated by JS -->
+                    <!--------------------->
+
+
+                </div>
+
+            </div>
+
+            <div id="sourceCode" class="m-3">
+                <button type="button" class="btn border border-2 rounded-0 p-1 fs-7">Service Code</button>
+            </div>
+
+            <div id="copyRight" class="m-3">
+                <p class="fs-7 p-0 m-0">1997-2024 Netflix, inc.</p>
+            </div>
+
+        </footer> <!-- End footer container-->
+
+    </div> <!-- End first fluid container -->
+
+    <!-- Begin modelInfoCard-->
+    <div class="modal" id="cardInfoModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 id="modalTitle" class="modal-title text-red-NF">Modal Heading</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div id="modalBody" class="modal-body shadow">
+                    Modal body..
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-red-NF text-white-NF " data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </div> <!-- End modelInfoCard-->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <!-- You can also include Popper and our JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, -->
-    <!-- save some kilobytes by not including Popper. -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
-
-    <!-- Insert you scripts here. -->
-    <!-- <script src="/myScript.js"></script> -->
-    <script src="/imagesArray.js"></script>
-    <script src="/logic.js"></script>
+    <script src="./jsTools.js"></script>
+    <script src="./contentsArray.js"></script>
+    <script src="./logic.js"></script>
 
 </body>
 

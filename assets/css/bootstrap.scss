@@ -1,6 +1,4 @@
 @import '../scss/functions';
-
-@import '../scss/functions';
 @import '../scss/variables';
 
 $white-NF: #fafafa;
@@ -32,33 +30,98 @@ $custom-font-sizes: (
 
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);
 
-$custom-position-values: (
+// Nuovi valori da aggiungere alla mappa "width"
+$new-width-values: (
+  10: 10%,
+  15: 15%,
+  20: 20%,
   25: 25%,
+  50: 50%,
   75: 75%,
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
+  100: 100%,
+  auto: auto,
+);
+
+// Creo una nuova mappa di valori "width" unendo i valori esistenti con i nuovi
+
+$utilities: (
+  'width': (
+    property: width,
+    class: w,
+    values: $new-width-values,
+  ),
+);
+
+$custom-position-values: (
+  10: 10%,
+  15: 15%,
+  20: 20%,
+
+  80: 80%,
+  85: 85%,
+  90: 90%,
+  95: 95%,
 );
 
 $position-values: map-merge($position-values, $custom-position-values);
 
-body {
-  font-family: 'Inter', sans-serif;
+// Import del Google font Inter
+@import url('http://fonts.googleapis.com/css?family=Inter:400,300,700');
+
+@import '../scss/bootstrap.scss';
+
+* {
+  box-sizing: border-box;
 }
 
-.navbar-nav {
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.nav,
+.navbar,
+.dropdown {
   color: $white-NF;
   li {
     color: $white-NF;
-    .nav-link {
+    .nav-link,
+    .dropdown-link {
       font-size: map-get($font-sizes, 7);
       color: $white-NF;
+      text-decoration: none;
       &:hover {
-        font-weight: bold;
-        color: $white-NF;
-      }
-      &.active {
-        color: $white-NF;
+        transform: scale(
+          1.05
+        ); // Non da fastidio come il bold, non sposta gli altri link
       }
     }
   }
 }
 
-@import '../scss/bootstrap.scss';
+#tvShowsButtonsDiv {
+  button {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+#trendingNowCards img:hover,
+#watchItAgainCards img:hover,
+#newReleasesCards img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 0px $white-NF;
+}
+
+#profileButtons {
+  button {
+    &:hover {
+      transform: scale(1.1);
+      background-color: $gray-NF-light;
+      color: $gray-NF;
+    }
+  }
+}
